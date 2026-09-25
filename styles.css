@@ -138,3 +138,7 @@ h2 { font-size: clamp(36px, 5.4vw, 66px); }
 .experience-type { font-size: 12px; }
 .site-footer { font-size: 12px; }
 .contact-link { font-size: 17px; }
+
+/* Match FatiGat's project field to the EpiskoAI orange while retaining its logo. */
+.fatigue-mark { background: var(--coral); }
+.fatigat-readme-image { mix-blend-mode: darken; }
