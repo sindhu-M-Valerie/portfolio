@@ -143,4 +143,4 @@ h2 { font-size: clamp(36px, 5.4vw, 66px); }
 .fatigue-mark { background: var(--coral); }
 .fatigat-readme-image { mix-blend-mode: darken; }
 .episko-visual { background: var(--coral); }
-.episkoai-readme-image { background: var(--coral); mix-blend-mode: darken; }
+.episkoai-readme-image { background: var(--coral); mix-blend-mode: normal; filter: grayscale(1) sepia(1) saturate(5) hue-rotate(322deg) contrast(.95); }
