@@ -4,7 +4,7 @@
 
 > Building reliable AI and operational systems at the intersection of data, quality, policy, and human judgment.
 
-[LinkedIn](#) · [GitHub](#) · [Portfolio](#)
+[LinkedIn](https://www.linkedin.com/in/sindhu-marpureddy-11a67249/) · [GitHub](https://github.com/sindhu-M-Valerie) · [Portfolio](https://sindhu-m-valerie.github.io/portfolio/)
 
 ---
 
@@ -128,7 +128,7 @@ Argus is a real-time civic and abuse-risk intelligence dashboard designed to sur
 
 `JavaScript` `HTML` `CSS` `JSON` `GitHub Pages`
 
-[View Project](#)
+[View Project](https://sindhu-m-valerie.github.io/Argus/)
 
 ---
 
