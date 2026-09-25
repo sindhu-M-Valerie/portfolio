@@ -142,3 +142,5 @@ h2 { font-size: clamp(36px, 5.4vw, 66px); }
 /* Match FatiGat's project field to the EpiskoAI orange while retaining its logo. */
 .fatigue-mark { background: var(--coral); }
 .fatigat-readme-image { mix-blend-mode: darken; }
+.episko-visual { background: var(--coral); }
+.episkoai-readme-image { background: var(--coral); mix-blend-mode: darken; }
