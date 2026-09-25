@@ -1,12 +1,12 @@
 :root {
-  --powder: #dfeef3;
-  --powder-light: #f5fbfd;
-  --ink: #1d3d4c;
-  --ink-soft: #55737d;
-  --line: rgba(29, 61, 76, .12);
+  --powder: #cfe2ee;
+  --powder-light: #edf7fb;
+  --ink: #173750;
+  --ink-soft: #4f6a7d;
+  --line: rgba(23, 55, 80, .12);
   --coral: #d38b78;
-  --yellow: #f7dfa7;
-  --cream: #fffdf8;
+  --yellow: #f0d69f;
+  --cream: #f9fbff;
   --mono: 'DM Mono', monospace;
   --sans: 'Manrope', sans-serif;
 }
