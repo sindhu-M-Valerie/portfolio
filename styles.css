@@ -86,7 +86,7 @@ h1 em, h2 em { color: var(--coral); font-family: Georgia, serif; font-weight: 40
 .ticker { display: flex; width: max-content; align-items: center; gap: 40px; font: 12px var(--mono); text-transform: uppercase; animation: drift 10s linear infinite; }
 .ticker b { color: var(--coral); font-size: 18px; font-weight: 400; }
 @keyframes drift { to { transform: translateX(-35%); } }
-.work-experience-layout { display: grid; grid-template-columns: minmax(320px, .42fr) minmax(0, .58fr); gap: 46px; align-items: start; padding-top: 55px; padding-bottom: 70px; padding-left: 24px; padding-right: 24px; }
+.work-experience-layout { display: grid; grid-template-columns: minmax(320px, .42fr) minmax(0, .58fr); gap: 64px; align-items: start; padding-top: 55px; padding-bottom: 70px; padding-left: 24px; padding-right: 24px; }
 .work, .experience { min-width: 0; }
 .right-column { min-width: 0; }
 .work { padding-top: 0; padding-bottom: 0; }
