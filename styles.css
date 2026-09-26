@@ -186,3 +186,8 @@ h2 { font-size: clamp(36px, 5.4vw, 66px); }
 
 .work .project-card:first-child .project-meta a,
 .work .project-card:nth-child(4) .project-meta a { display: none; }
+
+.project-card-concept { opacity: .82; }
+.project-card-concept .project-meta span:first-child { color: var(--coral); }
+.experience-metrics { margin: 0; padding-left: 18px; color: #0d1b22; font-size: 16px; }
+.experience-metrics li + li { margin-top: 3px; }
