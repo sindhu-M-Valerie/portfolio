@@ -183,3 +183,6 @@ h2 { font-size: clamp(36px, 5.4vw, 66px); }
 .episkoai-readme-image { background: var(--coral); mix-blend-mode: multiply; filter: grayscale(1) contrast(100); }
 
 .experience .company-mark { width: 60px; height: 60px; }
+
+.work .project-card:first-child .project-meta a,
+.work .project-card:nth-child(4) .project-meta a { display: none; }
