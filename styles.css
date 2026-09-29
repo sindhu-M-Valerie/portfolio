@@ -5,6 +5,7 @@
   --ink-soft: #29485d;
   --line: rgba(15, 36, 50, .14);
   --coral: #d38b78;
+  --coral-text: #b85a28;
   --yellow: #f0d69f;
   --cream: #f9fbff;
   --mono: 'DM Mono', monospace;
@@ -191,3 +192,9 @@ h2 { font-size: clamp(36px, 5.4vw, 66px); }
 .project-card-concept .project-meta span:first-child { color: var(--coral); }
 .experience-metrics { margin: 0; padding-left: 18px; color: #0d1b22; font-size: 16px; }
 .experience-metrics li + li { margin-top: 3px; }
+
+.main-nav a:hover, .text-link:hover, .project-meta a:hover, .header-cta span, .button span,
+h1 em, h2 em, .note-pin, .hero-stats strong, .ticker b, .visual-label span,
+.signal-count span, .compact-mark span, .contact-strip a:hover, .phone-logo,
+.experience-number, .experience-item h3 small, .about-link:hover, .contact-link span,
+.project-card-concept .project-meta span:first-child { color: var(--coral-text); }
