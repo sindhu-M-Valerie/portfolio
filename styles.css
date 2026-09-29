@@ -198,3 +198,18 @@ h1 em, h2 em, .note-pin, .hero-stats strong, .ticker b, .visual-label span,
 .signal-count span, .compact-mark span, .contact-strip a:hover, .phone-logo,
 .experience-number, .experience-item h3 small, .about-link:hover, .contact-link span,
 .project-card-concept .project-meta span:first-child { color: var(--coral-text); }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 32px; min-height: 0; padding-top: 56px; padding-bottom: 70px; }
+  .hero-art-panel { grid-column: 1; }
+  .hero-art-frame { transform: none; }
+  .hero-note { grid-column: 1; justify-self: center; margin: 0 auto; max-width: 500px; transform: none; }
+  .work { align-self: auto; display: block; }
+  .project-grid { display: grid; flex: none; justify-content: initial; gap: 32px; }
+}
+
+@media (max-width: 760px) {
+  .hero-art-frame { width: 100%; transform: none; }
+  .hero-note { width: 100%; max-width: 340px; }
+  .project-grid { gap: 40px; }
+}
