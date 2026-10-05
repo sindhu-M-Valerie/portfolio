@@ -314,16 +314,18 @@ html.will-intro #page { visibility: hidden; }
   .stage-col { width: 100%; max-width: 520px; margin: 0 auto; }
 }
 @media (max-width: 700px) {
-  :root { --header-height: 82px; --footer-height: 78px; scroll-padding-top: 90px; }
-  .case-header { display: grid; height: auto; min-height: var(--header-height); grid-template-columns: minmax(0, 1fr) auto auto; gap: 7px; padding: 8px 12px; }
+  :root { --header-height: 110px; --footer-height: 78px; scroll-padding-top: 118px; }
+  .case-header { display: grid; height: auto; min-height: var(--header-height); grid-template-columns: minmax(0, 1fr) auto auto; grid-template-rows: auto auto; gap: 7px; padding: 8px 12px; }
+  .brand { grid-column: 1; grid-row: 1; }
   .brand b { font-size: 2.1rem; }
-  .menu-toggle { display: inline-flex; min-height: 38px; }
+  .menu-toggle { display: inline-flex; grid-column: 2; grid-row: 1; min-height: 38px; }
+  .case-header > .theme-toggle { grid-column: 3; grid-row: 1; }
   .menu-toggle svg { width: 15px; height: 15px; }
   .case-nav { position: absolute; top: 100%; right: 0; left: 0; display: none; width: auto; max-height: calc(100dvh - 74px); flex-direction: column; align-items: stretch; justify-content: flex-start; overflow-y: auto; padding: 7px 12px 12px; border-bottom: 1px solid var(--rule); background: var(--paper); box-shadow: 0 12px 16px rgba(30,26,20,.14); }
   .case-header.menu-open .case-nav { display: flex; }
   .case-nav a { min-height: 43px; gap: 10px; padding: 9px 10px; border-bottom: 1px solid rgba(30,26,20,.12); }
   .case-nav a[aria-current="page"] { border-bottom-color: var(--aged-edge); }
-  .resume-button { min-height: 38px; gap: 5px; margin-left: 0; padding: 7px 8px; }
+  .resume-button { grid-column: 1 / -1; grid-row: 2; justify-self: center; min-height: 38px; gap: 5px; margin-left: 0; padding: 7px 8px; }
   .resume-button svg { width: 15px; height: 15px; }
   .page-inner { width: calc(100% - 36px); padding: 54px 0 72px; }
   .route-view h1 { margin-bottom: 23px; font-size: clamp(43px, 12vw, 58px); }
@@ -355,13 +357,11 @@ html.will-intro #page { visibility: hidden; }
   .home-cta .button { padding: 13px 16px; }
 }
 @media (max-width: 600px) {
-  :root { --header-height: 132px; }
-  .case-header { height: auto; min-height: var(--header-height); grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto; padding-top: 8px; padding-bottom: 8px; }
-  .brand { grid-column: 1; grid-row: 1; }
-  .menu-toggle { grid-column: 2; grid-row: 1; }
-  .resume-button { grid-column: 1 / -1; grid-row: 2; justify-self: center; }
+  :root { --header-height: 110px; }
+  .case-header { grid-template-columns: minmax(0, 1fr) auto auto; }
 }
 @media (max-width: 390px) {
+  .brand b { font-size: 1.8rem; }
   .service-heading h2 { font-size: 23px; }
   .case-footer { padding-right: 15px; padding-left: 15px; }
   .case-card { grid-template-columns: 68px minmax(0, 1fr); gap: 11px; padding: 15px; }
@@ -384,9 +384,12 @@ html.will-intro #page { visibility: hidden; }
 .theme-toggle { display: inline-flex; min-height: 43px; flex: 0 0 auto; align-items: center; gap: 6px; padding: 8px 9px; color: var(--ink); border: 0; border-bottom: 2px solid transparent; background: transparent; cursor: pointer; font: 500 var(--font-nav) var(--body); white-space: nowrap; }
 .theme-toggle:hover { color: var(--burgundy); border-bottom-color: var(--aged-edge); }
 .theme-toggle svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; }
-#intro .theme-toggle { position: absolute; z-index: 2; top: max(16px, 3vh); right: max(16px, 3vw); padding: 10px 14px; border: 1px solid var(--aged-edge); background: rgba(230,211,176,.82); }
+#intro .theme-toggle { position: absolute; z-index: 2; top: auto; right: auto; bottom: max(16px, 3vh); left: max(16px, 3vw); min-height: 38px; padding: 6px 10px; border: 1px solid var(--aged-edge); background: rgba(230,211,176,.82); font-size: .8rem; }
 html.theme-anim body, html.theme-anim .case-header, html.theme-anim .case-card, html.theme-anim #page-home, html.theme-anim .paper-page { transition: background-color .35s ease, color .35s ease, border-color .35s ease; }
-@media (max-width: 700px) { .case-nav .theme-toggle { width: 100%; min-height: 43px; justify-content: flex-start; gap: 10px; padding: 9px 10px; border-bottom: 1px solid rgba(30,26,20,.12); } }
+@media (max-width: 700px) {
+  .case-header > .theme-toggle { width: 38px; min-height: 38px; justify-content: center; gap: 0; padding: 6px; border: 1px solid var(--deep-sepia); }
+  .case-header > .theme-toggle span { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+}
 
 html[data-theme="dark"] {
   --paper: #1F2125; --paper-hi: #2C3036; --paper-light: #F2F3F5;
@@ -449,8 +452,8 @@ html[data-theme="dark"] #intro .theme-toggle { color: #F2F3F5; background: rgba(
       <a href="#/method" data-route="method"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m15.5 15.5 5 5M8.5 10.8h4.6M10.8 8.5v4.6"/></svg><span>Method</span></a>
       <a href="#/service-record" data-route="service-record"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6 4.5h12v16H6zM9 8h6M9 12h6M9 16h4"/></svg><span>Service Record</span></a>
       <a href="#/contact" data-route="contact"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="1"/><path d="m4.5 7 7.5 5.8L19.5 7"/></svg><span>Contact</span></a>
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch between light and dark colours"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Dark</span></button>
     </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch between light and dark colours"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span>Dark</span></button>
     <a class="resume-button" href="assets/5SindhuMarpureddy6.pdf" download><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></svg><span>Download resume</span></a>
   </header>
 
