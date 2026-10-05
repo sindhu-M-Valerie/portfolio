@@ -901,27 +901,11 @@ function navigateTo(route, { pushHistory = true, animate = true } = {}) {
     return;
   }
 
-  const sourceX = sourceBounds?.width ? sourceBounds.left + sourceBounds.width / 2 : window.innerWidth / 2;
-  const targetX = targetBounds?.width ? targetBounds.left + targetBounds.width / 2 : window.innerWidth / 2;
-  const groundY = window.innerHeight - 86;
   transitionLayer.classList.add("is-active");
   const ground = document.createElement("div");
   ground.className = "transition-ground-line";
   transitionLayer.append(ground);
   transitionNodes.push(ground);
-  const mobile = window.innerWidth <= 700;
-  const tablet = window.innerWidth <= 1050;
-  const printCount = mobile ? 3 : 4;
-  const routeDirection = routes.has(previousRoute) && routes.has(route)
-    ? (Array.from(routes).indexOf(route) >= Array.from(routes).indexOf(previousRoute) ? 1 : -1)
-    : 1;
-  const horizontalGap = Math.abs(targetX - sourceX);
-  const trailStartX = horizontalGap >= 110 ? sourceX : Math.max(36, Math.min(window.innerWidth - 36, (sourceX + targetX) / 2 - routeDirection * 60));
-  const trailEndX = horizontalGap >= 110 ? targetX : Math.max(36, Math.min(window.innerWidth - 36, trailStartX + routeDirection * 120));
-  const transitionY = window.innerHeight - (mobile ? 82 : 104);
-  const transitionScale = mobile ? .8 : .48;
-  placeFootprintTrail(footprintLayer, trailStartX, trailEndX, transitionY, printCount, 170, 24, 0, true, TRANSITION_PRINT_HOLD_MS, FOOTPRINT_FADE_MS, transitionY, transitionScale);
-
   const fadeOut = previousView.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 160, easing: "ease-out", fill: "forwards" });
   transitionAnimations.push(fadeOut);
   transitionTimers.push(window.setTimeout(() => {
